@@ -16,6 +16,15 @@ app = dash.Dash(__name__)
 # Макет (Layout) дашборда
 app.layout = html.Div([
     html.H1("Финансовый дашборд", style={'textAlign': 'center', 'color': '#2c3e50'}),
+    dcc.Upload(...),
+    html.Div([
+        html.Div([dcc.Graph(id='indicator-gauge')], className='four columns'),
+        html.Div([dcc.Graph(id='time-series')], className='eight columns')
+    ], className='row'),
+    # ... и так далее
+], style={'font-family': 'Arial'})
+app.layout = html.Div([
+    html.H1("Финансовый дашборд", style={'textAlign': 'center', 'color': '#2c3e50'}),
     
     # Компонент загрузки файла
     dcc.Upload(
