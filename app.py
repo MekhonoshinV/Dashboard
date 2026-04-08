@@ -170,4 +170,4 @@ def update_dashboard(selected_category, stored_data):
     return fig_line, fig_pie, fig_hist, fig_scatter, data, columns, fig_gauge
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run(debug=True)
